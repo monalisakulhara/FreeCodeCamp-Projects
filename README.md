@@ -5,4 +5,4 @@ This repository contains all my projects made while learning Full Stack Developm
 ## Projects
 
 - [CatPhoto Website](catphotowebsite.html/)
-[ScreenShot of CatPhoto Website](Images/Images-1.png)
+[ScreenShot of CatPhoto Website](Images/Image-1.png)
