@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<!--All pages should begin with <!DOCTYPE html>. This special string is known as a declaration and ensures the browser tries to meet industry-wide specifications.-->
+<!--<!DOCTYPE html> tells browsers that the document is an HTML5 document which is the latest version of HTML.-->
+<!--html element is the root element of an HTML page and wraps all content on the page-->
+<!--specify the language of your page by adding the lang attribute to the html element-->
+<html lang="en">
+    <!--head element is used to contain metadata about the document, such as its title, links to stylesheets, and scripts. Metadata is information about the page that isn't displayed directly on the page.-->
+    <!-- set browser behavior by adding meta elements in the head,  set browser behavior by adding meta elements in the head-->
+    <head>
+        <meta charset="utf-8">
+        <title>CatPhotoApp</title>
+    </head>
+    <body>
+        <main>
+            <h1>CatPhotoApp</h1>
+            <!--section - is used to define sections in a document, such as chapters, headers. footers, or any other sections of the document. it is a semantic element that helps with SEO and accessibility.-->
+            <sectiion>
+                <h2>Cat Photo</h2>
+                <!--TO add link <a href=""></a> & To open link to new window use target="_blank"--> 
+                <p>Everyone loves <a href="https://cdn.freecodecamp.org/curriculum/cat-photo-app/running-cats.jpg" target="_blank">cute cat</a> online!</p>
+                <p>See more <a href="https://freecatphotoapp.com" target="_blank">cat photos</a> in our gallery.</p>
+            
+                <!--To add image <img srf="adress of image" alt="desecribe image for disabled">-->
+                <a href="https://freecatphotoapp.com">
+                <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat is lying on its back">
+                </a>
+            </sectiion>
+            <section>
+               <h2>Cat Lists</h2> 
+               <h3>Things cats love:</h3>
+               <!--To create an unordered list of items, use the ul element. -->
+                <ul>
+                    <!--li element is used to create a list item in an ordered or unordered list.-->
+                    <li>catnip</li>
+                    <li>laser pointers</li>
+                    <li>lasagna</li>
+                </ul>
+                <!--The figure element represents self-contained content and will allow you to associate an image with a caption.-->
+                <!--A figure caption (figcaption) element is used to add a caption to describe the image contained within the figure element.-->
+                <figure>
+                    <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/lasagna.jpg" alt="A slice of lasagna on a plate.">
+                    <!--emphasize[italic] on a specific word or phrase, use the em element.-->
+
+                    <figcaption>Cats <em>love</em> lasagna.</figcaption>
+                </figure>
+                <h3>Top 3 things cats hate:</h3>
+                <!-- ordered list (ol) is similar to an unordered list, but list items in an ordered list are numbered when displayed.-->
+                 <ol>
+                    <li>flea treatment</li>
+                    <li>thunder</li>
+                    <li>other cats</li>
+                 </ol>
+                 <figure>
+                    <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg" alt="Two tabby kittens sleeping together on a couch.">
+                    <!--strong element is used to indicate that some text is of strong importance or urgent.-->
+                    <figcaption>Cats <strong>hate</strong> other cats.</figcaption>
+                </figure>
+                </section>
+                <section>
+                    <h2>Cat Form</h2>
+                    <!-- form element is used to get information from a user like their name, email, and other details.-->
+                    <!-- action attribute indicates where form data should be sent.-->
+                    <!-- input element allows you several ways to collect data from a web form. Like img elements, input elements are a void element and do not need closing tags.-->
+                    <form action="https://freecatphotoapp.com/submit-cat-photo">
+                        <!--You can use radio buttons for questions where you want only one answer out of multiple options.-->
+                        <!--label elements are used to help associate the text for an input element with the input element itself (especially for assistive technologies like screen readers)-->
+                        <!--id attribute is used to identify specific HTML elements. Each id attribute's value must be unique from all other id values for the entire page.-->
+                        <!--The fieldset element is used to group related inputs and labels together in a web form. fieldset elements are block-level elements, meaning that they appear on a new line-->
+                        <fieldset>
+                            <!-- legend element acts as a caption for the content in the fieldset element. It gives users context about what they should enter into that part of the form.-->
+                             <legend>Is your cat an indoor or outdoor cat?</legend>
+                            <label><input checked id="indoor" value="indoor" type="radio" name="indoor-outdoor"> Indoor</label>
+                        </fieldset>
+                            <!--To make it so selecting one radio button automatically deselects the other, both buttons must have a name attribute with the same value.-->
+                        <fieldset>
+                            <label><input id="outdoor" value="outdoor" type="radio" name="indoor-outdoor"> Outdoor</label>
+                        </fieldset>
+                        <fieldset>
+                            <legend>What's your cat's personality?</legend>
+                            <!--There's another way to associate an input element's text with the element itself. You can nest the text within a label element and add a for attribute with the same value as the input element's id attribute.-->
+                            <input checked id="loving" value="loving" name="personality" type="checkbox"> 
+                            <label for="loving">Loving</label>
+                        </fieldset>
+                        <fieldset>    
+                            <input id="lazy" value="lazy" name="personality" type="checkbox"> 
+                            <label for="lazy">Lazy</label>
+                        </fieldset>
+                        <fieldset>    
+                            <input id="energetic" value="energetic" name="personality" type="checkbox"> 
+                            <label for="energetic">Energetic</label>
+                        </fieldset>
+                            <!--There are many kinds of inputs you can create using the type attribute. You can easily create a password field, reset button, or a control to let users select a file from their computer.-->
+                        <!--In order for a form's data to be accessed by the location specified in the action attribute, you must give the text field a name attribute and assign it a value to represent the data being submitted-->
+                        <!--Placeholder text is used to give people a hint about what kind of information to enter into an input-->
+                        <!--To prevent a user from submitting your form when required information is missing, you need to add the required attribute to an input element.-->
+                        <input type="text" name="catphotourl" placeholder="cat photo URL" required>
+                        <!--button element is used to create a clickable button.-->
+                        <button type="submit">Submit</button>
+                        <!-- both input and button elements are inline elements, which don't appear on new lines.-->
+                         
+                    </form>
+                </section>
+        </main>
+            <!--footer element is used to define a footer for a document or section. A footer typically contains information about the author of the document, copyright data, links to terms of use, contact information, and more.-->
+            <footer>
+                <p>No Copyright - <a href="https://www.freecodecamp.org">freeCodeCamp.org</a></p>
+            </footer>
+    </body>
+</html>
